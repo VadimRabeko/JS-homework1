@@ -4,15 +4,14 @@
 
 //1 <<<
 
-function hello2() {
-  let name = prompt('enter your name');
-  if (name != false) {
+function hello2(name) {
+  if (name) {
     return `Hello, ${name}!`;
   } else {
     return 'Hello, guest!';
   }
 }
-console.log(hello2());
+console.log(hello2('vadim'));
 
 //2 <<<
 
@@ -99,8 +98,7 @@ checkEqualNum();
 
 //TASK 3 <<<
 
-function strWord() {
-  let str = prompt('enter your string');
+function strWord(str) {
   let splt = str.split(' ');
   let res = '';
   for (let i = 0; i < splt.length; i++) {
@@ -113,9 +111,9 @@ function strWord() {
       res += y + z + ' ';
     }
   }
-  return alert(res);
+  return console.log(res);
 }
-strWord();
+strWord('how are you?');
 
 // TASK 4 <<<
 
@@ -135,8 +133,8 @@ calcArea();
 
 // TASK 5 <<<
 
-function calcSumNumber() {
-  let a = prompt('enter your number', 2021);
+function calcSumNumber(a = 2021) {
+  a = String(a);
   let sum = 0;
   for (let i = 0; i < a.length; i++) {
     let x = a[i];
@@ -144,12 +142,11 @@ function calcSumNumber() {
   }
   return sum;
 }
-console.log(calcSumNumber());
+console.log(calcSumNumber(2055));
 
 // TASK 6 <<<
 
-function strKebab() {
-  let str = prompt('enter your string');
+function strKebab(str) {
   let splt = str.split(' ');
   let res = '';
   for (let i = 0; i < splt.length; i++) {
@@ -161,14 +158,13 @@ function strKebab() {
       res += y + '-';
     }
   }
-  return alert(res);
+  return console.log(res);
 }
-strKebab();
+strKebab('How Are You?');
 
-//TASK 7
+//TASK 7 <<<
 
-function strAbb() {
-  let str = prompt('enter your string');
+function strAbb(str) {
   let splt = str.split(' ');
   let res = '';
   for (let i = 0; i < splt.length; i++) {
@@ -176,6 +172,6 @@ function strAbb() {
     let y = x.substring(0, 1).toUpperCase();
     res += y;
   }
-  return alert(res);
+  return console.log(res);
 }
-strAbb();
+strAbb('teach me skills');
